@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>AI Demo</title>
+
+<!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+
+<!-- Menu -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary"">
+           <a class="navbar-brand" href="#">AI Demo</a>
+             <div class="navbar-nav">
+               <a class="nav-item nav-link" href="index.html">Inference</a>
+               <a class="nav-item nav-link" href="webcam.html">Webcam</a>
+               <a class="nav-item nav-link" href="custom.html">Custom Classifier</a>
+             </div>
+         </nav>
+
+   <!-- Menu  -->
+</br>
+<div class="jumbotron">
+<p><b>This  app classify your images.</b> </p>
+<p>Upload an image an the program will say you what it is ! </br>
+tested in Chrome</p>
+
+<!--   choose a file        -->
+      <div class="custom-file">
+       <input type="file" class="custom-file-input" id="file" name="file"  accept="image/*" onchange="loadFile(event)"  />
+       <label class="custom-file-label" for="file">Choose a file</label>
+     </div>
+
+<!--   to patient      -->
+<b><div id="console2"></div> </b>
+
+<!--   show the prediction        -->
+<div class="alert alert-primary" role="alert">
+<div id="console"></div>
+</div>
+
+<!--    image display             -->
+<p><img id="output"
+     height="300" /></p>
+</div>
+
+<!-- Load . tensorflow, mobilenet and js -->
+            <script src="https://unpkg.com/@tensorflow/tfjs@1.0.1"></script>
+            <script src="https://unpkg.com/@tensorflow-models/mobilenet@2.0.4"></script>
+            <script src="index.js"></script>
+
+
+  </body>
+</html>
